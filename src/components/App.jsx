@@ -12,10 +12,8 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleClickFeedback = evt => {
-    const { name } = evt.target;
-    console.log({ name });
-    this.setState(prevSttate => ({ [name]: prevSttate[name] + 1 }));
+  handleClickFeedback = option => {
+    this.setState(prevSttate => ({ [option]: prevSttate[option] + 1 }));
   };
 
   countTotalFeedback = () => {
